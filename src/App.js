@@ -1,28 +1,15 @@
-import React, { Component } from 'react';
-import logo from './logo.svg';
+import React from "react";
+import { BrowserRouter, Router, Route } from 'react-router-dom';
 import './App.css';
+import Main from "./components/Main";
 
-class App extends Component {
-  render() {
-    return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </header>
-      </div>
-    );
-  }
-}
+// This could be completely wrong; saw several examples set up like this but not sure it goes here - keep getting a full page of errors that seems to direct back to the nodule modules, so I've probably messed it up
+
+const App = () =>
+  <Router>
+    <div>
+      <Route path="/" component={Main} />
+    </div>
+  </Router>;
 
 export default App;
